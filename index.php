@@ -1,11 +1,5 @@
 <?php
     $dir = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '.';
-    // if ($dir[0] === '/' || preg_match("/\.\./", $dir)) {
-    //     header("Location: ". basename(__FILE__));
-    // } elseif (is_file($dir)) {
-        // header("Location: $dir");
-    // }
-		var_dump($dir);
 		if ($dir === '/') {
 			$dir = ".";
 		} else if ($dir[0] === '/') {
