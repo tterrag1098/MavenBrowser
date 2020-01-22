@@ -101,6 +101,11 @@
             }
         }
         $urlpath = "$urldir$urlfile";
+        // Make sure that we append a / to the end of directories, to tell external scrapers that we're dealing with a directory
+        // and not an artifact
+        if (is_dir("$dir/$file")) {
+                $urlpath.= "/";
+        }
         // Remove params if empty
         $params = $urlpath ?: '';
 
